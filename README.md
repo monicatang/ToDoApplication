@@ -26,7 +26,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![Walkthrough] (https://github.com/monicatang/ToDoApplication/blob/master/project_1_todo.gif)
+![Walkthrough](https://github.com/monicatang/ToDoApplication/blob/master/project_1_todo.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
