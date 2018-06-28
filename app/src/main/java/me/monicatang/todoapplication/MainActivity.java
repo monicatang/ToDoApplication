@@ -38,20 +38,18 @@ public class MainActivity extends AppCompatActivity {
         readItems();
         itemsAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, items);
         lvItems.setAdapter(itemsAdapter);
-
-//        items.add("First todo item");
-//        items.add("Second todo item");
-
         setupListViewListener();
     }
 
     public void onAddItem(View v) {
         EditText etNewItem = (EditText) findViewById(R.id.etnewItem);
         String itemText = etNewItem.getText().toString();
-        itemsAdapter.add(itemText);
-        writeItems();
-        etNewItem.setText("");
-        Toast.makeText(getApplicationContext(), "Item added to list", Toast.LENGTH_SHORT).show();
+        if(!itemText.trim().equals("")) {
+            itemsAdapter.add(itemText);
+            writeItems();
+            etNewItem.setText("");
+            Toast.makeText(getApplicationContext(), "Item added to list", Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void setupListViewListener() {
